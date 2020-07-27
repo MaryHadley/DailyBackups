@@ -4,21 +4,27 @@
 #include "xAna_mc.C+"
 //#include "xAna_mc_C.so" //bad bad bad, causes craziness, instead use the .C+ notation above
 
-void run_mc () {
+void run_mc ( int txtFileNum, int lineToGet) {
 
-std::ifstream inFile("1.txt");
+std::ifstream inFile;
+
+if (txtFileNum == 1) {inFile.open("1.txt");}
+//std::ifstream inFile("1.txt");
 std::string myStr;
 std::string fileInQuestion;
 int counter = 0;
-int lineInFile = 0;
+int lineInFile;
+lineInFile = lineToGet;
 
+//if (txtFileNum == 1) {inFile = "1.txt"}
+if (inFile.is_open()){
 while (std::getline(inFile, myStr))
 { if (counter == lineInFile) {fileInQuestion = myStr;}
   else if (counter > lineInFile) {break;}
   counter = counter + 1;
     
     }
-
+}
 std::cout << "fileInQuestion: \n" << fileInQuestion << std::endl;
 
 //Example of how to do this from: https://www.geeksforgeeks.org/convert-string-char-array-cpp/
