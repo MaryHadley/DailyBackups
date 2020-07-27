@@ -51,7 +51,7 @@ std::cout << "char_array: \n" << char_array << std::endl;
 const char* ptr_to_the_string_that_is_char_array = char_array;
 
 std::cout << "ptr_to_the_string_that_is_char_array: " << ptr_to_the_string_that_is_char_array << std::endl;
-
+std::cout << "value pointed to by ptr_to_the_string_that_is_char_array:" << *ptr_to_the_string_that_is_char_array << std::endl;
 //gROOT->LoadMacro("xAna_mc.C+");
 
 const char* inpaths[] = {ptr_to_the_string_that_is_char_array};
