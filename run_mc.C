@@ -45,10 +45,3 @@ xAna_mc(inpaths, 1);
 
 }
 
-int main() {
-
-
-
-run_mc();
-return 0;
-}
