@@ -4,6 +4,15 @@
 #include "xAna_mc.C+"
 //#include "xAna_mc_C.so" //bad bad bad, causes craziness, instead use the .C+ notation above
 
+///Instructions to Run ///
+// run as, for example:
+//root -l 'run_mc.C(1,0)'
+//where the first argument (1 in this example) is the int associated with the textFile to open
+//and the second argument (0 here) is the line in that textFile we want to pick out 
+//(remember line counting starts at 0!)
+//So in words, type into the command line root -l, then single quote, run_mc.C(firstArg, secondArg) then close single quote
+//where firstArg and secondArg are ints
+
 void run_mc ( int txtFileNum, int lineToGet) {
 
 std::ifstream inFile;
